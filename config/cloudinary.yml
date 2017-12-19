@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: daibnz1iz
+  api_key: '313812572599346'
+  api_secret: ZnIvXbax4Ae5muw-A_VXGLsDlWg
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: daibnz1iz
+  api_key: '313812572599346'
+  api_secret: ZnIvXbax4Ae5muw-A_VXGLsDlWg
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: daibnz1iz
+  api_key: '313812572599346'
+  api_secret: ZnIvXbax4Ae5muw-A_VXGLsDlWg
+  enhance_image_tag: true
+  static_image_support: false
