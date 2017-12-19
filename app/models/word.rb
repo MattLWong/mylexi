@@ -6,5 +6,4 @@ class Word < ApplicationRecord
   has_many :followers,
     through: :word_follows,
     source: :follower
-
 end
