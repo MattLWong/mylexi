@@ -33,6 +33,12 @@ class Api::WordsController < ApplicationController
   end
 
   def destroy
+    @word = Word.find_by(id: params[:id])
+    if @word.delete
+      render :show
+    else
+      render json: "Could not delete word"
+    end
   end
 
   private
