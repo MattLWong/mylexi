@@ -1,12 +1,28 @@
 class Api::WordsController < ApplicationController
   def index
-    @words = Word.all
+    if params[:user_id]
+      @words = User.find_by(id: params[:user_id]).words
+      render :index
+    else
+      @words = Word.all
+      render :index
+    end
+  end
+
+  def search
+    if params[:query].present?
+      @words = Word.where('word ~ ?', params[:query])
+    else
+      @words = Word.none
+    end
     render :index
   end
 
   def create
     @word = Word.new(word_params)
     if @word.save
+      #create a word follow here
+      WordFollow.create!( {follower_id: current_user.id, word_id: @word.id} )
       render :show
     else
       render json: @word.errors.full_messages, status: 422

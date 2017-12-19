@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219021716) do
+ActiveRecord::Schema.define(version: 20171219092415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,9 +20,6 @@ ActiveRecord::Schema.define(version: 20171219021716) do
     t.integer "follower_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["followee_id", "follower_id"], name: "index_follows_on_followee_id_and_follower_id", unique: true
-    t.index ["followee_id"], name: "index_follows_on_followee_id"
-    t.index ["follower_id"], name: "index_follows_on_follower_id"
   end
 
   create_table "sentence_likes", force: :cascade do |t|
@@ -41,16 +38,14 @@ ActiveRecord::Schema.define(version: 20171219021716) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email", null: false
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.string "first_name", null: false
-    t.string "last_name", null: false
     t.string "image_url", default: "http://res.cloudinary.com/daibnz1iz/image/upload/v1513644364/ppictures/default.jpg"
     t.text "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
+    t.string "username", null: false
   end
 
   create_table "word_follows", force: :cascade do |t|
