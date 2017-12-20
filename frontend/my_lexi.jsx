@@ -7,7 +7,6 @@ import configureStore from './store/store.js';
 document.addEventListener('DOMContentLoaded', () => {
   let store = configureStore();
   if (window.currentUser) {
-    debugger;
     const preloadedState = { session: { currentUser: window.currentUser, errors: [] } };
     store = configureStore(preloadedState);
     delete window.currentUser;

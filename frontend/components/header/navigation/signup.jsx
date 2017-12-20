@@ -14,7 +14,6 @@ class Signup extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger;
     if (nextProps.errors.length < 1) {
       this.props.toggleSignup();
     }

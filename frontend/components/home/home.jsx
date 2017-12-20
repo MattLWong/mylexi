@@ -8,7 +8,7 @@ class Home extends React.Component {
     return(
       <div className='home'>
         <h1>Welcome to MyLexi!</h1>
-        <h5>MyLexi is a social app where users can build new vocabulary and share sentences.</h5>
+        <h5>MyLexi is a social app where users can grow their and practice their vocabulary.</h5>
       </div>
     )
   }

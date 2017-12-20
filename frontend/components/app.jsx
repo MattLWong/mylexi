@@ -13,12 +13,17 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import Header from './header/header';
 import Footer from './home/footer';
 import HomeContainer from './home/home_container';
+import FeedContainer from './feed/feed_container';
+import LibraryContainer from './library/library_container';
 
 const App = () => (
   <div>
     <Header/>
     <main id="site-content">
       <Route exact path='/' component={HomeContainer} />
+      <ProtectedRoute path='/feed' component={FeedContainer}/>
+      <ProtectedRoute path='/library' component={LibraryContainer}/>
+
     </main>
   </div>
 );

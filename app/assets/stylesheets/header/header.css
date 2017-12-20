@@ -53,3 +53,11 @@ header {
   border-top-right-radius: 19px;
   border-bottom-right-radius: 19px;
 }
+
+.logged-in-items li {
+  padding: 20px;
+  border: 1px solid grey;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}

@@ -12,6 +12,7 @@ class NavBar extends React.Component {
     };
     this.toggleLogin = this.toggleLogin.bind(this);
     this.toggleSignup = this.toggleSignup.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
   }
 
   toggleLogin(e) {
@@ -28,13 +29,15 @@ class NavBar extends React.Component {
     } else {
       this.setState({signupVisible: !this.state.signupVisible});
     }
-
+  }
+  handleLogout() {
+    this.props.logout();
   }
   renderLoggedInItems() {
     return(
       <ul className='logged-in-items'>
         <li>{this.props.first_name}</li>
-        <li>Log Out</li>
+        <li onClick={this.handleLogout}>Log Out</li>
       </ul>
     );
   }

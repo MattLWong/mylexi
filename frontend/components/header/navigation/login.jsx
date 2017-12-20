@@ -15,8 +15,8 @@ class Login extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/');
+    if (nextProps.errors.length < 1) {
+      this.props.toggleLogin();
     }
   }
 

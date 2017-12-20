@@ -20,3 +20,15 @@ export const logout = () => (
     url: '/api/session'
   })
 );
+
+export const fetchFeed = () => {
+  $.ajax({
+
+  })
+};
+
+export const fetchWords = () => {
+  $.ajax({
+
+  })
+};
