@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -10,6 +11,48 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+*/
+
+
+ /*
  *= require_self
+ *= require_tree .
+
  */
+
+ * {
+   box-sizing: border-box;
+ }
+
+  html, body, div, span, h1, h2, h3, h4, h5, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+   background: transparent;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ body {
+   font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+   line-height: 1;
+   color: #484848;
+   font-size: 14px;
+ }
+
+ ol, ul {
+   list-style: none;
+ }
+
+ img {
+   width: 100%
+ }
+
+ .root {
+   position: relative;
+ }
